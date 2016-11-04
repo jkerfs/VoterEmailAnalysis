@@ -7,7 +7,7 @@ toplevel_dir = os.path.dirname(os.path.realpath(__file__))
 rawdata_dir = os.path.join(toplevel_dir, "Takeout", "Mail")
 cleaned_dir = os.path.join(toplevel_dir, "CleanedData")
 
-unicode_and_newlines = re.compile(r"(?:=(?:[(?:A-F|0-9)]{2})?)|\\n|\\r")
+unicode_and_newlines = re.compile(r"(?:=(?:[(?:A-F|0-9)]{2})?)|\n|\r")
 
 def read_messages(mbox_path):
     def get_text(email):
